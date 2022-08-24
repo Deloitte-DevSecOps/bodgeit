@@ -19,4 +19,12 @@ steps:
     which ant
     ant -version
   displayName: 'Run a multi-line script'
-  
+- task: Ant@1
+  inputs:
+    workingDirectory: 'home/kali/test/'
+    buildFile: 'build/build-sb.xml'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
