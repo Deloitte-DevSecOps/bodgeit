@@ -6,9 +6,11 @@
 trigger:
 - master
 
-pool: 
-  Default
-
+pool:
+  name: Default
+  demands:
+  - myCustomCapability   # exists check for myCustomCapability
+  - Agent.Version -equals 2.144.0
 steps:
 - task: Maven@3
   inputs:
