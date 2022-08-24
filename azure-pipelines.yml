@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool: 
-  name: MyPool
+  name: kali
   demands:
   - myCustomCapability   # exists check for myCustomCapability
   - Agent.Version -equals 2.144.0
