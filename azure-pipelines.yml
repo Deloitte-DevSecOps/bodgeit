@@ -6,8 +6,7 @@
 trigger:
 - master
 
-variables:
-  System.Debug: True 
+
   
 pool:
   name: Default
