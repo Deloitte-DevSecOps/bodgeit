@@ -12,8 +12,11 @@ pool:
 steps:
 - task: Ant@1
   inputs:
+    workingDirectory: '/home/kali/ant'
     buildFile: 'build.xml'
-    options: 
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
+  
