@@ -21,7 +21,6 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Ant@1
   inputs:
-    workingDirectory: 'home/kali/test/'
     buildFile: 'build/build-sb.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
