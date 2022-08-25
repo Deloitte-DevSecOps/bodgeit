@@ -18,11 +18,8 @@ steps:
     which ant
     ant -version
   displayName: 'Run a multi-line script'
-- task: Ant@1
+- task: dependency-check-build-task@6
   inputs:
-    buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
+    projectName: 'Deloitte-DevSecOps.bodgeit'
+    scanPath: 'remote.origin.url'
+    format: 'CSV'
