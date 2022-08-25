@@ -19,5 +19,5 @@ steps:
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath: 'https://github.com/Deloitte-DevSecOps/bodgeit/tree/master/lib'
+    scanPath: ${{ parameters.scanDir }}
     format: 'CSV'
