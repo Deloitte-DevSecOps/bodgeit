@@ -12,12 +12,14 @@ pool:
 steps:
 - script: |
     echo $PATH
+    PWD
     java -version
     which ant
     ant -version
   displayName: 'Run a multi-line script'
+
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath:  '**/*.csproj'
+    scanPath:  '**/*.jar'
     format: 'CSV'
