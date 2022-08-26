@@ -13,10 +13,11 @@ steps:
 - script: |
     echo $PATH
     pwd
+    sh <(curl https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
     java -version
     which ant
     ant -version
-  displayName: 'Run a multi-line script'
+  displayName: 'Betterscan - SAST'
 
 - task: dependency-check-build-task@6
   inputs:
