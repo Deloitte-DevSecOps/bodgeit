@@ -12,8 +12,8 @@ pool:
 steps:
 - script: |
     echo $PATH
+    sudo chmod 777 /var/run/docker.sock
     pwd
-    sudo chmod 666 /var/run/docker.sock
     sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
 
