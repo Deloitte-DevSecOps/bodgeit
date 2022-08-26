@@ -13,7 +13,7 @@ steps:
 - script: |
     echo $PATH
     pwd
-    sh <(curl -k -i -t https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
+    sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
      displayName: 'Betterscan - SAST'
 
 - task: dependency-check-build-task@6
