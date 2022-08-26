@@ -13,7 +13,6 @@ steps:
 - script: |
     echo $PATH
     pwd
-    wget --no-check-certificate https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh
-    sh cli-html.sh
+    sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
 
