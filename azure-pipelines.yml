@@ -16,8 +16,3 @@ steps:
     sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
 
-- task: dependency-check-build-task@6
-  inputs:
-    projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath:  '/**/*.csproj'
-    format: 'CSV'
