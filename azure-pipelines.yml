@@ -13,14 +13,8 @@ steps:
 - script: |
     echo $PATH
     pwd
+    NAutoVTs=0
+    ReserveVT=N
     sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      echo $PATH
-      pwd
-      sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
-  displayName: 'Betterscan - SAST'
