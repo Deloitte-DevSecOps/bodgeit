@@ -13,7 +13,7 @@ steps:
 - script: |
     echo $PATH
     pwd
-    sudo chmod 666 /var/run/docker.soc
+    chmod 666 /var/run/docker.sock
     sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
 
