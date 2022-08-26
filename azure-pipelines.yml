@@ -13,7 +13,7 @@ steps:
 - script: |
     echo $PATH
     pwd
-    sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
+    sh <(curl -k -i https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
     java -version
     which ant
     ant -version
@@ -22,5 +22,5 @@ steps:
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath:  '**/*.jar'
+    scanPath:  '**/*lib/*.jar'
     format: 'CSV'
