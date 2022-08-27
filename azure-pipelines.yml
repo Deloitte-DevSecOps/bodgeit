@@ -14,6 +14,11 @@ steps:
     echo add_class_folder;
     mkdir ./build/WEB-INF/classes
   displayName: 'Add class folder'
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'Deloitte-DevSecOps.bodgeit'
+    scanPath: '/**/*.jar'
+    format: 'CSV'
 - task: Ant@1
   inputs:
     buildFile: 'build.xml'
