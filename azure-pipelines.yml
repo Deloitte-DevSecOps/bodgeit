@@ -12,7 +12,6 @@ pool:
 steps:
 - script: |
     echo $PATH
-    export COMPOSE_INTERACTIVE_NO_CLI=1
     pwd
     sh <(curl -k  https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
   displayName: 'Betterscan - SAST'
