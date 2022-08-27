@@ -16,8 +16,8 @@ steps:
   displayName: 'Add class folder'
 - task: dependency-check-build-task@6
   inputs:
-    projectName: 'Deloitte-DevSecOps/bodgeit'
-    scanPath: '/**/*.jar'
+    projectName: 'Deloitte-DevSecOps.bodgeit'
+    scanPath: /*.lib/
     enableRetired: false
     format: 'CSV'
 - task: Ant@1
