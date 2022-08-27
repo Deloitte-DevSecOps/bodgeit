@@ -22,10 +22,12 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
+  displayName: 'Ant Build'
 - script: |
     echo deepdive_scan
     wget https://discotek.ca/download?file=discotek.deepdive-1.5.11-beta.zip -o deepdive.zip
     unzip deepdive.zip
+  displayName: 'Deepdive - SAST'
 # steps:
 # - script: |
 # echo $PATH
