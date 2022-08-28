@@ -17,7 +17,7 @@ steps:
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath: /**/*.csproj
+    scanPath: /**/*.jar
     enableRetired: false
     format: 'CSV'
 - task: Ant@1
