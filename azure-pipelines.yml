@@ -39,6 +39,8 @@ steps:
     format: 'CSV'
     enableRetired: no
     additionalArguments: '--dotnet /home/kali/.dotnet/dotnet'
+    additionalArguments: '--retireJsUrl https://raw.githubusercontent.com/RetireJS/retire.js/33b4076ce87f3898b81af4fc1770a7b65aa54bcb/repository/jsrepository.json'
+                      '
 # steps:
 # - script: |
 # echo $PATH
