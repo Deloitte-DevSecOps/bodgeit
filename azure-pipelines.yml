@@ -19,6 +19,7 @@ steps:
     projectName: 'Deloitte-DevSecOps.bodgeit'
     scanPath: /**/*.jar
     enableRetired: false
+    failOnCVSS: false
     format: 'CSV'
 - task: Ant@1
   inputs:
