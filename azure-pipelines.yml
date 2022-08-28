@@ -38,6 +38,7 @@ steps:
     scanPath: './**/*.jar'
     enableRetired: false
     format: 'CSV'
+    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet'
 # steps:
 # - script: |
 # echo $PATH
