@@ -36,7 +36,6 @@ steps:
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
     scanPath: './**/*.jar'
-    enableRetired: false
     format: 'CSV'
     additionalArguments: '--dotnet /home/kali/.dotnet/dotnet'
 # steps:
