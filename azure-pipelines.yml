@@ -35,9 +35,7 @@ steps:
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
-    scanPath: /**/*.jar
-    enableRetired: false
-    failOnCVSS: false
+    scanPath: './**/*.jar'
     format: 'CSV'
 # steps:
 # - script: |
