@@ -37,8 +37,7 @@ steps:
     projectName: 'Deloitte-DevSecOps.bodgeit'
     scanPath: './**/*.jar'
     format: 'CSV'
-    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet '
-    enableRetired: no
+    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
 # steps:
 # - script: |
 # echo $PATH
