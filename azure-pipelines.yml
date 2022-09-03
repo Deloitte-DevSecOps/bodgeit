@@ -39,7 +39,7 @@ steps:
     format: 'CSV'
     additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
 - script: |
-    sh <(curl https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
+    sh <(curl -k https://raw.githubusercontent.com/marcinguy/betterscan-ce/master/cli-html.sh)
 #- script: |
 #   echo $PATH
 #  export CODE_DIR=${PWD}
