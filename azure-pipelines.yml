@@ -47,5 +47,5 @@ steps:
    docker run -e CODE_DIR -v ${PWD}:${PWD}  scanmycode/scanmycode3-ce:worker-cli /bin/sh -c 'cd $CODE_DIR && checkmate git init'
    docker run -e CODE_DIR -v ${PWD}:${PWD}  scanmycode/scanmycode3-ce:worker-cli /bin/sh -c 'cd $CODE_DIR && checkmate git analyze'
    docker run -e CODE_DIR -v ${PWD}:${PWD}  scanmycode/scanmycode3-ce:worker-cli /bin/sh -c 'cd $CODE_DIR && checkmate issues'
-   displayName:'Betterscan - SAST'
+  displayName: 'Betterscan - SAST'
 
