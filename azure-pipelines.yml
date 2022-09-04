@@ -11,7 +11,36 @@ pool:
 
 steps:
 - script: |
-   export CODE_DIR=${PWD}
-   cd $CODE_DIR
-   sh /home/kali/Desktop/betterscan-ce/betterscan-ce/cli-html.sh
-   displayName: 'Betterscan - SAST'
+    echo add_class_folder;
+    mkdir ./build/WEB-INF/classes
+  displayName: 'Add class folder'
+
+- task: Ant@1
+  inputs:
+    buildFile: 'build.xml'
+    options: 
+    targets: 'build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+  displayName: 'Ant Build'
+- script: |
+    echo deepdive_scan
+    wget https://discotek.ca/download?file=discotek.deepdive-1.5.11-beta.zip -O deepdive.zip
+    unzip deepdive.zip
+    mkdir deepdive_result
+    java -Xmx4G -jar deepdive-1.5.11-beta/lib/discotek.deepdive-engine-1.5.11-beta.jar -decompile=true -project-directory=deepdive-1.5.11-beta/sample-config -output-directory=deepdive_result  ./build/bodgeit.war
+  displayName: 'Deepdive - SAST'
+  continueOnError: Yes
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'Deloitte-DevSecOps.bodgeit'
+    scanPath: './**/*.jar'
+    format: 'CSV'
+    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
+
+#-  script: |
+#   export CODE_DIR=${PWD}
+#   cd $CODE_DIR
+#   sh /home/kali/Desktop/betterscan-ce/betterscan-ce/cli-html.sh
+#   displayName: 'Betterscan - SAST'
