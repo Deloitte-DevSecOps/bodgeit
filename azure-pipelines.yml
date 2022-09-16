@@ -38,7 +38,7 @@ steps:
     scanPath: './**/*.jar'
     format: 'CSV'
     additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
-    failOnCVSS: '7'
+#failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
 #   cd $CODE_DIR
