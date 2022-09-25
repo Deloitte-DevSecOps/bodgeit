@@ -51,7 +51,6 @@ steps:
     aggressivemode: true
     scantype: 'targetedScan'
     url: 'http://localhost:8080/bodegit'
-    port: 
 #port: '8080'
  #failOnCVSS: '7'
 #-  script: |
