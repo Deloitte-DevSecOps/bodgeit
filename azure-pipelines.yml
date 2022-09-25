@@ -47,11 +47,13 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - task: owaspzap@1
+- task: owaspzap@1
   inputs:
     aggressivemode: true
     scantype: 'targetedScan'
-    url: 'http://localhost:8080/bodgeit/'
-#failOnCVSS: '7'
+    url: 'http://localhost:'
+    port: '8080'
+ #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
 #   cd $CODE_DIR
