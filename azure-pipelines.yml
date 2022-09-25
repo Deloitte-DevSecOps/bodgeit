@@ -46,10 +46,11 @@ steps:
     Warfile: './build/bodgeit.war'
     Context: '/'
     ServerVersion: '7OrAbove'
-
 - task: owaspzap@1
   inputs:
-    port: '8080'
+    aggressivemode: true
+    scantype: 'targetedScan'
+    url: 'http://localhost:8080/bodgeit/'
 #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
