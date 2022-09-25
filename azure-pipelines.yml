@@ -38,6 +38,14 @@ steps:
     scanPath: './**/*.jar'
     format: 'CSV'
     additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
+- task: TomcatDeployment@1
+  inputs:
+    TomcatUrl: 'http://localhost:8080'
+    Username: 'manager'
+    Password: 'manhem03!'
+    Warfile: './build/bodgeit.war'
+    Context: '/'
+    ServerVersion: '7OrAbove'
 #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
