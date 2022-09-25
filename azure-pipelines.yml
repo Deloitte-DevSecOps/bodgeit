@@ -50,7 +50,7 @@ steps:
   inputs:
     aggressivemode: true
     scantype: 'targetedScan'
-    url: 'http://localhost:'
+    url: 'http://localhost'
     port: '8080'
  #failOnCVSS: '7'
 #-  script: |
