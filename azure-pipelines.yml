@@ -41,8 +41,8 @@ steps:
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://localhost:8080'
-    Username: 'manager'
-    Password: 'manhem03!'
+    Username: 'admintomsec'
+    Password: 'hem03!'
     Warfile: './build/bodgeit.war'
     Context: '/'
     ServerVersion: '7OrAbove'
