@@ -50,8 +50,8 @@ steps:
   inputs:
     aggressivemode: true
     scantype: 'targetedScan'
-    url: 'http://localhost:8080/bodegit'
-#port: '8080'
+    url: 'http://localhost'
+    port: '8080/bodegit'
  #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
