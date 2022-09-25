@@ -46,10 +46,9 @@ steps:
     Warfile: './build/bodgeit.war'
     Context: '/'
     ServerVersion: '7OrAbove'
+
 - task: owaspzap@1
   inputs:
-    scantype: 'targetedScan'
-    url: 'http://localhost:8080/bodgeit/'
     port: '8080'
 #failOnCVSS: '7'
 #-  script: |
