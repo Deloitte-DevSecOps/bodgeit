@@ -47,7 +47,6 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - task: owaspzap@1
-- task: owaspzap@1
   inputs:
     aggressivemode: true
     scantype: 'targetedScan'
