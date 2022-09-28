@@ -46,6 +46,8 @@ steps:
     Warfile: './build/bodgeit.war'
     Context: '/'
     ServerVersion: '7OrAbove'
+- script: |
+    touch /home/kali/Documents/azure/_work/1/s/owaspzap/report.json
 - task: owaspzap@1
   inputs:
     scantype: 'targetedScan'
