@@ -47,12 +47,9 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - task: owaspzap@1
-- task: owaspzap@1
   inputs:
-    aggressivemode: true
     scantype: 'targetedScan'
-    provideCustomContext: true
-    contextPath: '${Build.SourcesDirectory)/security/context-file.context'
+    url: 'http://localhost:8080/bodgeit/'
 #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
