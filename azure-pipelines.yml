@@ -47,6 +47,7 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - script: |
+    mkdir /home/kali/Documents/azure/_work/1/s/owaspzap
     touch /home/kali/Documents/azure/_work/1/s/owaspzap/report.json
 - task: owaspzap@1
   inputs:
