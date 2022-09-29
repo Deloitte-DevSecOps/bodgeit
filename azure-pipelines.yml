@@ -47,7 +47,7 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - script: |
-    usr/share/zaproxy/zap.sh -cmd -quickurl http://localhost:8080/bodgeit -quickout /home/kali/report.html
+    /usr/share/zaproxy/zap.sh -cmd -quickurl http://localhost:8080/bodgeit -quickout /home/kali/report.html
 
 #failOnCVSS: '7'
 #-  script: |
