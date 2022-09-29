@@ -47,12 +47,8 @@ steps:
     Context: '/'
     ServerVersion: '7OrAbove'
 - script: |
-    mkdir /home/kali/Documents/azure/_work/1/s/owaspzap
-    touch /home/kali/Documents/azure/_work/1/s/owaspzap/report.json
-- task: owaspzap@1
-  inputs:
-    scantype: 'targetedScan'
-    url: 'http://localhost:8080/bodgeit/'
+    usr/share/zaproxy/zap.sh -cmd -quickurl http://localhost:8080/bodgeit -quickout /home/kali/report.html
+
 #failOnCVSS: '7'
 #-  script: |
 #   export CODE_DIR=${PWD}
