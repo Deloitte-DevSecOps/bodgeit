@@ -25,8 +25,7 @@ steps:
     javaHomeOption: 'JDKVersion'
   displayName: 'Ant Build'
 - script: |
-    cp /home/kali/Documents/azure/deepdive.zip .
-    unzip deepdive.zip
+    cp -R /home/kali/Documents/azure/deepdive-1.5.11-beta .
     mkdir deepdive_result
     java -Xmx4G -jar deepdive-1.5.11-beta/lib/discotek.deepdive-engine-1.5.11-beta.jar -decompile=true -project-directory=deepdive-1.5.11-beta/sample-config -output-directory=deepdive_result  ./build/bodgeit.war
   displayName: 'SAST - Deepdive'
@@ -56,4 +55,4 @@ steps:
 #   sh /home/kali/Desktop/betterscan-ce/betterscan-ce/cli-html.sh
 #   displayName: 'Betterscan - SAST'
 # wget https://web.archive.org/web/20220814053943if_/https://discotek.ca/download?file=discotek.deepdive-1.5.11-beta.zip -O deepdive.zip
- 
+# unzip deepdive.zip
