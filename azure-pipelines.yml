@@ -25,24 +25,12 @@ steps:
     javaHomeOption: 'JDKVersion'
   displayName: 'Ant Build'
 - script: |
-    wget https://web.archive.org/web/20220814053943if_/https://discotek.ca/download?file=discotek.deepdive-1.5.11-beta.zip -O deepdive1.zip
-    unzip deepdive1.zip
+   cp /home/kali/Documents/azure/deepdive.zip .
+    unzip deepdive.zip
     mkdir deepdive_result
     java -Xmx4G -jar deepdive-1.5.11-beta/lib/discotek.deepdive-engine-1.5.11-beta.jar -decompile=true -project-directory=deepdive-1.5.11-beta/sample-config -output-directory=deepdive_result  ./build/bodgeit.war
   displayName: 'SAST - Deepdive'
   continueOnError: Yes
-- script: |
-      set -e
-      git config --global user.email "azuredevops@microsoft.com"
-      git config --global user.name "Azure DevOps" 
-      git checkout -b $(Build.SourceBranchName)
-      sudo CODE_DIR=$(Build.SourcesDirectory) checkmate init
-      sudo CODE_DIR=$(Build.SourcesDirectory) checkmate git init
-      sudo CODE_DIR=$(Build.SourcesDirectory) checkmate git analyze --branch $(Build.SourceBranchName)
-      sudo CODE_DIR=$(Build.SourcesDirectory) checkmate issues html
-      displayName: Static Application Security Test (SAST)
-      env:
-        CODE_DIR: '$(Build.SourcesDirectory)'
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
@@ -67,3 +55,5 @@ steps:
 #   cd $CODE_DIR
 #   sh /home/kali/Desktop/betterscan-ce/betterscan-ce/cli-html.sh
 #   displayName: 'Betterscan - SAST'
+# wget https://web.archive.org/web/20220814053943if_/https://discotek.ca/download?file=discotek.deepdive-1.5.11-beta.zip -O deepdive.zip
+ 
