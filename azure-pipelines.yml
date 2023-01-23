@@ -31,6 +31,8 @@ steps:
     cp -R deepdive_result /home/kali/Documents/azure/
   displayName: 'SAST - Deepdive'
   continueOnError: Yes
+- task: betterscanscan@0
+     
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'Deloitte-DevSecOps.bodgeit'
