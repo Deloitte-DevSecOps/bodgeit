@@ -38,7 +38,7 @@ steps:
     projectName: 'Deloitte-DevSecOps.bodgeit'
     scanPath: './**/*.jar'
     format: 'CSV'
-#    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
+    additionalArguments: '--dotnet /home/kali/.dotnet/dotnet --disableRetireJS'
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://localhost:8080'
