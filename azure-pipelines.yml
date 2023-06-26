@@ -50,7 +50,7 @@ steps:
 - script: |
     /usr/share/zaproxy/zap.sh -cmd -quickurl http://localhost:8080/bodgeit -quickout /home/kali/report.html
   displayName: 'DAST - OWASP ZAP'
-- task: betterscanscan@0 
+#- task: betterscanscan@0 
     
 #failOnCVSS: '7'
 #-  script: |
